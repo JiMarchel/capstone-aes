@@ -7,6 +7,8 @@ import EncryptText from './components/EncrypText';
 import DecryptText from './components/DecrypText';
 import EncryptImage from './components/EncrypImage';
 import DecryptImage from './components/DecrypImage';
+import EncryptFile from './components/EncrypFile';
+import DecryptFile from './components/DecrypFile';
 
 function App() {
 	return (
@@ -19,8 +21,8 @@ function App() {
 				<Route path="/decrypt-text" element={<DecryptText />} />
 				<Route path="/encrypt-image" element={<EncryptImage />} />
 				<Route path="/decrypt-image" element={<DecryptImage />} />
-				{/* <Route path="/encrypt-file" element={<EncryptFile />} /> */}
-				{/* <Route path="/decrypt-file" element={<DecryptFile />} /> */}
+				<Route path="/encrypt-file" element={<EncryptFile />} />
+				<Route path="/decrypt-file" element={<DecryptFile />} />
 			</Routes>
 		</Router>
 	);

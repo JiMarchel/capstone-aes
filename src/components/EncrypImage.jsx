@@ -104,19 +104,21 @@ const EncryptImage = () => {
 					</div>
 				</CardContent>
 
-				<CardFooter>
-					<div className="w-full space-y-2">
-						<CardResult title="Key:" result={encryptionResult.aesKey} />
-						<CardResult title="IV:" result={encryptionResult.iv} />
-						<CardResult title="Encryption:" result={encryptionResult.encryptedFilePath} />
+				{encryptionResult.aesKey && encryptionResult.iv && encryptionResult.encryptedFilePath && (
+					<CardFooter>
+						<div className="w-full space-y-2">
+							<CardResult title="Key:" result={encryptionResult.aesKey} />
+							<CardResult title="IV:" result={encryptionResult.iv} />
+							<CardResult title="Encryption:" result={encryptionResult.encryptedFilePath} />
 
-						{encryptionResult.encryptedFilePath && (
-							<Button onClick={handleDownload}>
-								Download Encrypted File
-							</Button>
-						)}
-					</div>
-				</CardFooter>
+							{encryptionResult.encryptedFilePath && (
+								<Button onClick={handleDownload}>
+									Download Encrypted File
+								</Button>
+							)}
+						</div>
+					</CardFooter>
+				)}
 			</Card>
 		</Wrapper>
 	);

@@ -205,7 +205,7 @@ const DecryptFile = () => {
 
 				{decryptedFilePath && (
 					<CardFooter>
-						<div >
+						<div className="w-full space-y-2">
 							<h3>Decryption result:</h3>
 							<CardResult title="File:" result={decryptedFilePath} />
 							<Button onClick={handleDownload}>

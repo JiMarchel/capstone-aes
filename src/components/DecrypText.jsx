@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";  // Import axios untuk request HTTP
-import "../App.css";
 import Wrapper from "./Wrapper";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
 import { Label } from "./ui/label";
@@ -99,12 +98,14 @@ const DecryptText = () => {
 					</div>
 				</CardContent>
 
-				<CardFooter>
-					<div className="w-full">
-						<CardResult title="Decrypt text:" result={decryptedResult} />
-					</div>
+				{decryptedResult && (
+					<CardFooter>
+						<div className="w-full">
+							<CardResult title="Decrypt text:" result={decryptedResult} />
+						</div>
+					</CardFooter>
+				)}
 
-				</CardFooter>
 			</Card>
 		</Wrapper>
 	);

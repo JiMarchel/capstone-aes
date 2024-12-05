@@ -91,14 +91,16 @@ const EncryptText = () => {
 					</div>
 
 				</CardContent>
-				<CardFooter>
-					{/* Menampilkan hasil enkripsi */}
-					<div className="w-full space-y-2">
-						<CardResult title="Key:" result={encryptionResult.key} />
-						<CardResult title="IV:" result={encryptionResult.iv} />
-						<CardResult title="Ciphertext:" result={encryptionResult.cipher} />
-					</div>
-				</CardFooter>
+				{encryptionResult.key && encryptionResult.iv && encryptionResult.cipher && (
+					<CardFooter>
+						{/* Menampilkan hasil enkripsi */}
+						<div className="w-full space-y-2">
+							<CardResult title="Key:" result={encryptionResult.key} />
+							<CardResult title="IV:" result={encryptionResult.iv} />
+							<CardResult title="Ciphertext:" result={encryptionResult.cipher} />
+						</div>
+					</CardFooter>
+				)}
 			</Card>
 		</Wrapper>
 	);

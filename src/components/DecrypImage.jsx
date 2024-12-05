@@ -114,16 +114,19 @@ const DecryptImage = () => {
 
 				{/* Hasil dekripsi */}
 				<CardFooter>
-					<div className="w-full space-y-2">
-						<h3>Decrypt Result</h3>
-						<CardResult title="Name File:" result={decryptedFileName} />
-
-						<img src={decryptedImage} alt="Decrypted" />
-						{/* Tombol unduh gambar hasil dekripsi */}
-						<a href={decryptedImage} download={decryptedFileName}>
-							Download Gambar
-						</a>
-					</div>
+					{decryptedImage && decryptedFileName && (
+						<div className="w-full space-y-2">
+							<h3>Decrypt Result</h3>
+							<CardResult title="Name File:" result={decryptedFileName} />
+							<img src={decryptedImage} alt="Decrypted" />
+							{/* Tombol unduh gambar hasil dekripsi */}
+							<Button asChild className="cursor-pointer ">
+								<a href={decryptedImage} download={decryptedFileName}>
+									Download Gambar
+								</a>
+							</Button>
+						</div>
+					)}
 				</CardFooter>
 			</Card>
 		</Wrapper>

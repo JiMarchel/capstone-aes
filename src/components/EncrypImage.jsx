@@ -12,7 +12,7 @@ import { CardResult } from "./CardResult";
 const EncryptImage = () => {
 	const [imageFile, setImageFile] = useState(null);
 	const [keyLength, setKeyLength] = useState("128");
-	const [encryptionResult, setEncryptionResult] = useState({ aesKey: "", iv: "", encryptedFilePath: "alsndald" });
+	const [encryptionResult, setEncryptionResult] = useState({ aesKey: "", iv: "", encryptedFilePath: "" });
 
 	const handleEncrypt = async () => {
 		if (!imageFile) {
